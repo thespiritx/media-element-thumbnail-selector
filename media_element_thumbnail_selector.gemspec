@@ -7,15 +7,15 @@ require "media_element_thumbnail_selector/version"
 Gem::Specification.new do |s|
   s.name        = "media-element-thumbnail-selector"
   s.version     = MediaElementThumbnailSelector::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of MediaElementThumbnailSelector."
-  s.description = "TODO: Description of MediaElementThumbnailSelector."
+  s.authors     = ["Adam Hallett"]
+  s.email       = ["adam.t.hallett@gmail.com"]
+  s.homepage    = "http://github.com/atomical/media-element-thumbnail-selector"
+  s.summary     = "Create thumbnails directly from the player"
+  s.description = "Create thumbnails directly from the player"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3"
-
+  s.add_dependency "rails", "~> 3.2.3"
+  s.add_development_dependency 'guard-coffeescript'
 end

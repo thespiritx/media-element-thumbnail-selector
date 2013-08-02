@@ -7,3 +7,13 @@
           features: 'thumbnailSelector']
         });
 ```
+
+==Development
+
+
+To watch for changes to the coffeescript file:
+
+```cli
+$ guard init
+$ guard start
+```
