@@ -5,7 +5,7 @@ require "media_element_thumbnail_selector/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "media-element-thumbnail-selector"
+  s.name        = "media_element_thumbnail_selector"
   s.version     = MediaElementThumbnailSelector::VERSION
   s.authors     = ["Adam Hallett"]
   s.email       = ["adam.t.hallett@gmail.com"]
