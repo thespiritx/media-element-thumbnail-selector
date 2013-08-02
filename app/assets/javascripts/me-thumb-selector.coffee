@@ -27,6 +27,7 @@
     thumbnailSelectorUpdateThumbnail: (url, seconds) ->
       $.ajax
         url: url
+        type: 'post'
         data:
           seconds: seconds
 

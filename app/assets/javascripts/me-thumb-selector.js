@@ -11,6 +11,7 @@
       thumbnailSelectorUpdateThumbnail: function(url, seconds) {
         return $.ajax({
           url: url,
+          type: 'post',
           data: {
             seconds: seconds
           }
