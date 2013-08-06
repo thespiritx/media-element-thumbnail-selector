@@ -6,8 +6,8 @@
 
   $.extend MediaElementPlayer::,
     thumbnailSelectorConfirmationTemplate: ( context) ->
-      """     
-        <div class="modal hide fade">
+      """
+        <div class="modal hide fade middle">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h3>
@@ -17,11 +17,11 @@
 
               <div class="modal-body">
                 <div class="media">
-                    <a class="pull-left" href="#">
-                  <img class="media-object" class='img-polaroid' src="#{context.posterURL}?offset=#{context.offset}&preview=true" style="width: 64px; height: 64px;">
+                    <a href="#">
+                      <img class="media-object" class='img-polaroid' src="#{context.posterURL}?offset=#{context.offset}&preview=true">
                     </a>
                   <div class="media-body">
-                    <h4 class="media-heading"></h4> 
+                    <h4 class="media-heading"></h4>
                     This will update the poster and thumbnail images for this video.
                   </div>
                 </div>
