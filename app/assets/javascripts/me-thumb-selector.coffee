@@ -45,13 +45,14 @@
       button.click (event) ->
         baseURL = $('.mejs-poster.mejs-layer img').attr('src').split('/').slice(0,-1).join('/')
         posterURL = "#{baseURL}/poster"
+        stillURL = "#{baseURL}/still"
         offset = player.getCurrentTime()
 
         $template = $ player.thumbnailSelectorConfirmationTemplate offset: offset, posterURL: posterURL
         $template.find('.btn.btn-primary').click (event) ->
           that = this
           $.ajax
-            url: posterURL
+            url: stillURL
             type: 'post'
             data:
               offset: offset
