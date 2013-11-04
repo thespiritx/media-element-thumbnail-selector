@@ -3,6 +3,7 @@
   $.extend mejs.MepDefaults,
     thumbnailSelectorEnabled: false
     thumbnailSelectorUpdateURL: ''
+    thumbnailSelectorOnMobile: false
 
   $.extend MediaElementPlayer::,
     thumbnailSelectorConfirmationTemplate: ( context) ->
@@ -36,6 +37,7 @@
       # No support for audio tracks yet
       return unless player.isVideo
       return unless player.options.thumbnailSelectorEnabled
+      return if !player.options.thumbnailSelectorOnMobile && (mejs.MediaFeatures.isiOS || mejs.MediaFeatures.isAndroid)
 
       button = $("<div class='mejs-button mejs-thumbnail-selector'>
                     <button type='button' aria-controls='mep_0' title='Create thumbnail' aria-label='Create thumbnail'/>
