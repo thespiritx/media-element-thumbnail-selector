@@ -11,7 +11,7 @@
       # No support for audio tracks yet
       return unless player.isVideo
       return unless player.options.thumbnailSelectorEnabled
-      return if !player.options.thumbnailSelectorOnMobile && (mejs.MediaFeatures.isiOS || mejs.MediaFeatures.isAndroid)
+      return if !player.options.thumbnailSelectorOnMobile && (mejs.Features.isiOS || mejs.Features.isAndroid)
 
       $offset = 0
       $stillURL = ''
@@ -57,13 +57,13 @@
 
       $('body').append($confirm_dlg)
 
-      button = $("<div class='mejs__button mejs__thumbnail-selector'>
+      button = $("<div class='mejs-button mejs-thumbnail-selector'>
                     <button type='button' aria-controls='mep_0' title='Create thumbnail' aria-label='Create thumbnail'/>
                   </div>")
       button.appendTo(controls)
 
       button.click (event) ->
-        baseURL = $('.mejs__poster.mejs__layer img').attr('src').split('/').slice(0,-1).join('/')
+        baseURL = $('.mejs-poster.mejs-layer img').attr('src').split('/').slice(0,-1).join('/')
         posterURL = "#{baseURL}/poster"
         $stillURL = "#{baseURL}/still"
         $offset = player.getCurrentTime()
